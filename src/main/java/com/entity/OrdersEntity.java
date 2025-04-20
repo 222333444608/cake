@@ -24,9 +24,6 @@ import com.baomidou.mybatisplus.enums.IdType;
 /**
  * 订单
  * 数据库通用操作实体类（普通增删改查）
- * @author 
- * @email 
- * @date 2022-03-15 18:57:07
  */
 @TableName("orders")
 public class OrdersEntity<T> implements Serializable {

@@ -219,12 +219,6 @@ public class OrdersController {
 		int count = ordersService.selectCount(wrapper);
 		return R.ok().put("count", count);
 	}
-	
-
-
-
-
-
 
     /**
      * （按值统计）

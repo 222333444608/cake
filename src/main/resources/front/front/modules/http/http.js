@@ -37,7 +37,7 @@ layui.define(['jquery', 'layer'], function(exports) { //提示：模块也可以
 					if (result.code == 0) {
 						callback(result);
 					} else if (result.code == 401 || result.code == 403) {
-						window.parent.location.href = '../login/login.scss';
+						window.parent.location.href = '../login/login.html';
 					} else {
 						layer.msg(result.msg, {
 							time: 2000,
@@ -49,7 +49,7 @@ layui.define(['jquery', 'layer'], function(exports) { //提示：模块也可以
 				error: function(xhr, status, error) {
 					console.log(xhr, status, error)
 					if(xhr.responseJSON.code==401 || xhr.responseJSON.code==403) {
-                                                 window.parent.location.href = '../login/login.scss';
+                                                 window.parent.location.href = '../login/login.html';
 					} else {
 						layer.msg("请求接口失败", {
 							time: 2000,
@@ -84,7 +84,7 @@ layui.define(['jquery', 'layer'], function(exports) { //提示：模块也可以
 					if (result.code == 0) {
 						callback(result);
 					} else if (result.code == 401 || result.code == 403) {
-						window.parent.location.href = '../login/login.scss';
+						window.parent.location.href = '../login/login.html';
 					} else {
 						layer.msg(result.msg, {
 							time: 2000,
@@ -96,7 +96,7 @@ layui.define(['jquery', 'layer'], function(exports) { //提示：模块也可以
 				error: function(xhr, status, error) {
 					console.log(xhr, status, error)
 					if(xhr.responseJSON.code==401 || xhr.responseJSON.code==403) {
-                                                 window.parent.location.href = '../login/login.scss';
+                                                 window.parent.location.href = '../login/login.html';
 					} else {
 						layer.msg("请求接口失败", {
 							time: 2000,
@@ -126,7 +126,7 @@ layui.define(['jquery', 'layer'], function(exports) { //提示：模块也可以
 					if (res.code == 0) {
 						callback(res);
 					} else if (res.code == 401 || result.code == 403) {
-						window.parent.location.href = '../login/login.scss';
+						window.parent.location.href = '../login/login.html';
 					} else {
 						layer.msg(res.msg, {
 							time: 2000,

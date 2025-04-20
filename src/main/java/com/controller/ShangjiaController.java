@@ -11,6 +11,9 @@ import java.util.Date;
 import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 
+import com.entity.UserEntity;
+import com.entity.YonghuEntity;
+import com.service.UserService;
 import com.utils.ValidatorUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -45,7 +48,10 @@ import java.io.IOException;
 public class ShangjiaController {
     @Autowired
     private ShangjiaService shangjiaService;
-
+	@Autowired
+	private UserService userService;
+	@Autowired
+	private YonghuController yonghuController;
 
     
 	@Autowired
@@ -80,7 +86,18 @@ public class ShangjiaController {
 		Long uId = new Date().getTime();
 		shangjia.setId(uId);
         shangjiaService.insert(shangjia);
-        return R.ok();
+
+		YonghuEntity yonghuEntity = new YonghuEntity();
+		yonghuEntity.setAddtime(shangjia.getAddtime());
+		yonghuEntity.setId(uId);
+		yonghuEntity.setLianxidianhua(shangjia.getLianxidianhua());
+		yonghuEntity.setMoney(shangjia.getMoney());
+		yonghuEntity.setMima(shangjia.getMima());
+		yonghuEntity.setNianling(18);
+		yonghuEntity.setYonghuxingming(shangjia.getShangjiamingcheng());
+		yonghuEntity.setYonghuzhanghao(shangjia.getShangjiamingcheng());
+		yonghuController.register(yonghuEntity);
+		return R.ok();
     }
 
 	

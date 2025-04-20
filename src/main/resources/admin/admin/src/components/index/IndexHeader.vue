@@ -65,7 +65,7 @@
 				});
 			},
       			onIndexTap(){
-      				window.location.href = `${this.$base.indexUrl}`
+      				window.location.href = `${this.$base.loginUrl}`
     			},
 			setHeaderStyle() {
 			  this.$nextTick(()=>{

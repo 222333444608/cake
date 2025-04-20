@@ -13,10 +13,6 @@ import com.entity.view.OrdersView;
 
 /**
  * 订单
- *
- * @author 
- * @email 
- * @date 2022-03-15 18:57:07
  */
 public interface OrdersService extends IService<OrdersEntity> {
 
